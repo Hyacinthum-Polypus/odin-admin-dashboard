@@ -38,7 +38,7 @@ svg {
 
 header {
     grid-area: header;
-    padding:10px 25px;;
+    padding: 25px 25px;;
 
     display: grid;
     grid-template-columns: 1fr 1fr 4fr 1fr 1fr 1fr;
@@ -46,11 +46,29 @@ header {
     align-items: center;
     column-gap: 20px;
     row-gap: 10px;
+
+    font-family: Roboto-Black;
+
 }
 
 header form {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 75px 1fr;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+form > button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form > input {
+    border: none;
+    background-color: #E2E8F0;
+    border-radius: 25px;
+    padding: 0 16px;
 }
 
 header > .notification {
@@ -65,9 +83,14 @@ header > .user-pfp {
     grid-column: 2 / 4;
 }
 
-header form {
-    grid-column-start: 1;
-    grid-column-end: 4
+button.header-bottom {
+    background-color: #1992d4;
+    border: none;
+    border-radius: 20px;
+    height: 60%;
+    color: white;
+    font-size: 1rem;
+    font-family: Roboto-Black;
 }
 
 aside {
@@ -79,14 +102,41 @@ aside {
     font-family: Roboto-Black;
 }
 
+aside img {
+    filter: invert(100%);
+}
+
+aside h1 {
+    font-size: 2em;
+}
+
+nav .nav-name {
+    font-size: 1.7em;
+}
+
+nav img {
+    height: 40px;
+}
+
 nav > a, .logo {
     display: grid;
     grid-template-columns: 75px 1fr;
+    align-items: center;;
 }
+
+.logo {
+    margin-bottom: 100px;
+}
+
+.logo > img {
+    height: 60px;
+}
+
 
 nav {
     display: grid;
     grid-template-rows: repeat(10, 1fr);
+    row-gap: 25px;
 }
 
 .space {
@@ -128,6 +178,10 @@ main {
     flex-direction: column;
 }
 
+.project-container > p {
+    font-size: 1.3em;
+}
+
 .project-buttons {
     flex: 1;
     align-self: flex-end;
@@ -163,6 +217,10 @@ main {
     flex: 1 1 0;
     padding: 30px 0;
     border-bottom: 3px whitesmoke solid;
+}
+
+.announcement > p {
+    font-size: 0.9em;
 }
 
 .end {
