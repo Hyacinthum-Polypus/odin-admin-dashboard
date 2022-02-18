@@ -43,8 +43,8 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 4fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    align-items: center;;
-    column-gap: 50px;
+    align-items: center;
+    column-gap: 20px;
     row-gap: 10px;
 }
 
@@ -53,21 +53,16 @@ header form {
     grid-template-columns: 100px 1fr;
 }
 
-.header-bottom {
+header > .notification {
+    justify-self: end;
+}
+
+header > .user-pfp {
+    justify-self: center;
 }
 
 .welcome-message {
     grid-column: 2 / 4;
-}
-
-.header-bottom.welcome-message {
-    grid-row: 2;
-    align-self: flex-end;
-}
-
-.header-bottom.user-name {
-    grid-row: 3;
-    align-self: flex-start;
 }
 
 header form {
@@ -108,7 +103,37 @@ main {
 }
 
 .projects {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects > h2 {
+    margin-bottom: 10px;
+}
+
+.projects-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+}
+
+.project-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 10px solid #E7AD27;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-buttons {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .news {
