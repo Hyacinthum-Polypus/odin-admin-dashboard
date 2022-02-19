@@ -5,7 +5,6 @@
 
 a {
     text-decoration: none;
-    color: white
 }
 
 @font-face {
@@ -44,6 +43,9 @@ header {
 
     font-family: Roboto-Black;
 
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 1px 10px lightgrey;
 }
 
 header form {
@@ -82,7 +84,7 @@ header > .user-pfp {
 button.header-bottom {
     background-color: #1992d4;
     border: none;
-    border-radius: 20px;
+    border-radius: 100px;
     height: 60%;
     color: white;
     font-size: 1rem;
@@ -90,12 +92,19 @@ button.header-bottom {
 }
 
 aside {
+    position: relative;
+    z-index: 15;
+
     padding: 25px;
     grid-area: sidebar;
     background-color: #1992d4;
     color: white;
 
     font-family: Roboto-Black;
+}
+
+aside > nav a {
+    color: white;
 }
 
 aside img {
@@ -174,6 +183,10 @@ main {
     flex-direction: column;
 }
 
+.card {
+    box-shadow: 4px 4px 5px lightgray;
+}
+
 .project-container > p {
     font-size: 1.3em;
 }
@@ -184,6 +197,8 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    gap: 50px;
+    margin-top: 25px;
 }
 
 .news {
@@ -237,6 +252,10 @@ main {
     padding: 0 25px;
 
     border-radius: 8px;
+}
+
+.trending a {
+    color: black;
 }
 
 .trending-item {
